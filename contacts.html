@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - Парафія Воскресіння Христового</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --dark-gold: #B8860B;
+            --text-dark: #2c3e50;
+            --bg-light: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            align-items: start; /* Щоб карта не розтягувала текст */
+        }
+
+        .info-section h2 {
+            color: var(--dark-gold);
+            border-bottom: 2px solid var(--primary-gold);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            margin-top: 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            gap: 15px;
+        }
+
+        .contact-item i {
+            font-size: 20px;
+            color: var(--primary-gold);
+            margin-top: 5px;
+        }
+
+        .contact-item div h4 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .contact-item div p {
+            margin: 5px 0 0;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Карта */
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #eee;
+            height: 450px; /* Фіксуємо висоту як у iframe */
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: var(--dark-gold);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { transform: translateX(-5px); }
+
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .map-container { height: 350px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="contact-grid">
+        <div class="info-section">
+            <h2>Наші контакти</h2>
+            
+            <div class="contact-item">
+                <i class="fas fa-location-dot"></i>
+                <div>
+                    <h4>Адреса</h4>
+                    <p>вул. Івана-Франка, 2, Липівка, Івано-Франківська область</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <h4>Телефон</h4>
+                    <p>+38 (097) 468-69-44</p>
+                </div>
+            </div>
+        </div> 
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5256.39523880192!2d24.756082640983767!3d48.797206836770265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c55511abcc61%3A0xa1837bfea0b6b077!2z0KbQtdGA0LrQstCwINGB0LLRj9GC0L7Qs9C-INCS0L7RgdC60YDQtdGB0ZbQvdC90Y8g0KXRgNC40YHRgtC-0LLQvtCz0L4!5e0!3m2!1suk!2sua!4v1775847323077!5m2!1suk!2sua"                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        </div>
+
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Назад на головну</a>
+</div>
+
+</body>
+</html>

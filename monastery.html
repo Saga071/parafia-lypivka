@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урочище Монастир - Липівка</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --dark-gold: #B8860B;
+            --text-dark: #1a252f;
+        }
+
+        body { margin: 0; font-family: 'Montserrat', sans-serif; line-height: 1.8; color: var(--text-dark); background-color: #f4f7f6; }
+
+        .navbar { display: flex; justify-content: space-between; align-items: center; background: white; padding: 15px 50px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-weight: 700; color: var(--dark-gold); text-decoration: none; display: flex; align-items: center; gap: 12px; }
+        .menu a { margin: 0 15px; text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 14px; }
+
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('monastery-bg.jpg'); /* Замініть на фото урочища */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        .container { max-width: 1000px; margin: -50px auto 50px; position: relative; z-index: 10; }
+        
+        .info-card {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .highlight { color: var(--dark-gold); font-weight: 700; }
+
+        .photo-block { margin: 30px 0; text-align: center; }
+        .photo-block img { width: 100%; max-width: 560px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .photo-block p { font-size: 13px; color: #999; margin-top: 10px; font-style: italic; }
+
+        footer { background: #1a252f; color: white; padding: 40px 50px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html" class="logo">
+        <i class="fas fa-church"></i>
+        <div>ВОСКРЕСІННЯ ХРИСТОВОГО <span>с. Липівка</span></div>
+    </a>
+    <div class="menu">
+        <a href="index.html">Головна</a>
+        <a href="history.html">Історія парафії</a>
+        <a href="monastery.html" style="color: var(--primary-gold);">Урочище Монастир</a>
+        <a href="interesting.html">Цікаво знати</a>
+        <a href="contacts.html">Контакти</a>
+    </div>
+</div>
+
+<div class="page-header">
+    <h1>Урочище Монастир</h1>
+    <p>Святе місце, оповите легендами та спокоєм</p>
+</div>
+
+<div class="container">
+    <div class="info-card">
+        <h2>Урочище Монастир</h2>
+
+        <p>Урочище <span class="highlight">«Монастир»</span> — це історична назва місцевості, яка збереглася в пам'яті жителів села Липівка протягом багатьох поколінь. Саме так липівчани називають лісову місцевість, де колись знаходилися дерев'яна церква Воскресіння Христового та чоловічий Свято-Троїцький монастир. Назва урочища походить саме від монастиря, який діяв тут у 1711–1724 роках. Про існування цієї обителі згадує український історик Іван Крип'якевич.</p>
+
+        <p>Близько 1700 року було збудовано та освячено дерев'яну церкву Воскресіння Христового. Саме вона стала духовним осередком місцевої громади. Після закриття монастиря храм було розібрано та перевезено до центру села Липівка, де він зберігся до наших днів як пам'ятка сакральної архітектури та живий свідок багатовікової історії парафії.</p>
+
+        <p>Урочище «Монастир» і сьогодні залишається особливим місцем молитви та паломництва. Тут знаходиться монастирське джерело, вода з якого здавна вважається цілющою, особливо при захворюваннях очей.</p>
+
+        <div class="photo-block">
+            <img src="photos/monastery-1.jpg" alt="Урочище Монастир">
+        </div>
+
+        <p>Саме з цим джерелом пов'язано багато місцевих переказів, а також історія чудотворної ікони Божої Матері «Одигітрія», яка, за народною традицією, тричі поверталася до цього святого місця. Поруч із джерелом встановлена фігура Пресвятої Богородиці, біля якої паломники та парафіяни збираються на спільну молитву.</p>
+
+        <div class="photo-block">
+            <img src="photos/monastery-2.jpg" alt="Фігура Пресвятої Богородиці біля джерела">
+        </div>
+
+        <p>Протягом багатьох років на місці, де колись стояла дерев'яна церква Воскресіння Христового, височів пам'ятний хрест, який нагадував про давню святиню та монаше життя. В останні роки урочище «Монастир» переживає особливе духовне відродження. На місці давнього хреста було встановлено великий й хрест, який став видимим символом віри та пам'яті про історичне минуле цього місця.</p>
+
+        <div class="photo-block">
+            <img src="photos/monastery-3.jpg" alt="Пам'ятний хрест в урочищі Монастир">
+        </div>
+
+        <p>Крім того, саме на місці колишньої монастирської церкви було споруджено нову каплицю, яка стала осередком молитви для численних прочан і парафіян.</p>
+
+        <p>Особливою окрасою урочища є Хресна дорога, прокладена мальовничою лісовою стежкою.</p>
+
+        <div class="photo-block">
+            <img src="photos/monastery-4.jpg" alt="Хресна дорога в урочищі Монастир">
+        </div>
+
+        <p>Проходячи її стаціями, вірні мають можливість у тиші природи роздумувати над страстями Господа нашого Ісуса Христа, поєднуючи молитву з духовним переживанням історії спасіння.</p>
+
+        <p>Щороку, у переддень свята Різдва святого Івана Хрестителя, до урочища вирушає урочиста процесійна хода з чудотворною іконою Божої Матері «Одигітрія».</p>
+
+        <div class="photo-block">
+            <img src="photos/monastery-5.jpg" alt="Процесія з чудотворною іконою">
+        </div>
+
+        <p>Тут звершується молебень до Богородиці моління за участю духовенства, парафіян і численних паломників, які прибувають, щоб помолитися біля монастирського джерела та вклонитися місцю, з якого бере початок історія парафії.</p>
+
+        <div class="photo-block">
+            <img src="photos/monastery-6.jpg" alt="Молебень в урочищі Монастир">
+        </div>
+
+        <p>Сьогодні урочище «Монастир» є не лише пам'яткою історії, а й живим духовним центром, який поєднує минуле із сучасністю. Воно нагадує про багатовікову історію Липівки, подвиг монашої спільноти, давню дерев'яну церкву Воскресіння Христового та неперервність духовної традиції, що зберігається і передається новим поколінням.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Парафія Воскресіння Христового. Всі права захищені.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новини - Парафія Воскресіння Христового</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --dark-gold: #B8860B;
+            --text-dark: #2c3e50;
+            --bg-light: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            padding-bottom: 50px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            color: var(--dark-gold);
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+
+        /* Сітка для новин */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Картка новини */
+        .news-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .news-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-date {
+            font-size: 12px;
+            color: var(--primary-gold);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .news-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            color: var(--text-dark);
+        }
+
+        .news-text {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            text-decoration: none;
+            color: var(--dark-gold);
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            text-decoration: none;
+            color: var(--dark-gold);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { transform: translateX(-5px); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Новини парафії</h1>
+        <p>Дізнавайтеся про останні події та життя нашої громади</p>
+    </div>
+
+    <div class="news-grid">
+        <article class="news-card">
+            <img src="https://images.unsplash.com/photo-1544427920-c49ccfb85579" alt="Новина 1" class="news-image">
+            <div class="news-content">
+                <span class="news-date">3 Квітня, 2026</span>
+                <h3 class="news-title">Підготовка до Великодніх свят</h3>
+                <p class="news-text">Запрошуємо всіх парафіян долучитися до прибирання території храму та підготовки до святкових Богослужінь.</p>
+                <a href="#" class="read-more">Читати далі →</a>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df" alt="Новина 2" class="news-image">
+            <div class="news-content">
+                <span class="news-date">30 Березня, 2026</span>
+                <h3 class="news-title">Зустріч молоді УМХ</h3>
+                <p class="news-text">Минулої неділі відбулася зустріч нашої молодіжної спільноти. Обговорювали плани на літній табір.</p>
+                <a href="#" class="read-more">Читати далі →</a>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3" alt="Новина 3" class="news-image">
+            <div class="news-content">
+                <span class="news-date">25 Березня, 2026</span>
+                <h3 class="news-title">Хресна дорога для дітей</h3>
+                <p class="news-text">Цієї п'ятниці запрошуємо всіх дітей нашої парафії на спільну молитву Хресної дороги.</p>
+                <a href="#" class="read-more">Читати далі →</a>
+            </div>
+        </article>
+    </div>
+
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Назад на головну</a>
+</div>
+
+</body>
+</html>

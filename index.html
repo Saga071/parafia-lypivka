@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Парафія Воскресіння Христового - Липівка</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --dark-gold: #B8860B;
+            --facebook-blue: #1877F2;
+            --instagram-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            --text-dark: #1a252f;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            background-color: #fcfcfc;
+        }
+
+        /* Навігація */
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            row-gap: 12px;
+            background-color: var(--white);
+            padding: 15px 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--dark-gold);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            line-height: 1.2;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            color: #777;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu a, .dropbtn {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 14px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 5px 0;
+        }
+
+        .menu a:hover, .dropdown:hover .dropbtn {
+            color: var(--primary-gold);
+        }
+
+        /* Випадаюче меню */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 220px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            top: 100%;
+            left: 0;
+            padding: 10px 0;
+            border-top: 3px solid var(--primary-gold);
+        }
+
+        .dropdown-content a {
+            color: var(--text-dark);
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            margin: 0;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .dropdown-content a:hover {
+            background-color: #fff9e6;
+            color: var(--dark-gold);
+            padding-left: 25px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            animation: slideUp 0.3s ease;
+        }
+
+        /* Права частина меню */
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .social-link {
+            font-size: 22px;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-link.fb { color: var(--facebook-blue); }
+        .social-link.ig { 
+            background: var(--instagram-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .social-link:hover { transform: scale(1.15); }
+
+        /* БАНЕР */
+        .hero {
+            height: 75vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('church-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(30px) brightness(0.5);
+            transform: scale(1.1);
+            z-index: 1;
+        }
+
+        .hero-img {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            width: auto;
+            max-width: 100%;
+            margin: 0 auto;
+            display: block;
+            object-fit: contain;
+            box-shadow: 0 0 60px rgba(0,0,0,0.9);
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 1100px) {
+            .menu a { margin: 0 8px; font-size: 13px; }
+        }
+
+        @media (max-width: 900px) {
+            .navbar { padding: 15px 20px; justify-content: center; }
+            .menu { flex-wrap: wrap; justify-content: center; }
+            .nav-right { gap: 15px; }
+        }
+
+        @media (max-width: 600px) {
+            .hero { height: 60vh; }
+        }
+
+        footer {
+            background-color: #1a252f;
+            color: white;
+            padding: 60px 50px 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#" class="logo">
+        <i class="fas fa-church" style="font-size: 28px;"></i>
+        <div>
+            ВОСКРЕСІННЯ ХРИСТОВОГО
+            <span>Парафія УГКЦ с. Липівка</span>
+        </div>
+    </a>
+
+    <div class="menu">
+        <a href="history.html">Історія парафії</a>
+        <a href="monastery.html">Урочище Монастир</a>
+        <a href="news.html">Новини</a>
+        
+        <div class="dropdown">
+            <span class="dropbtn">Спільноти <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i></span>
+            <div class="dropdown-content">
+                <a href="umh.html"><i class="fas fa-users" style="margin-right: 8px;"></i> УМХ</a>
+                <a href="mothers.html"><i class="fas fa-hands-praying" style="margin-right: 8px;"></i> Матері в молитві</a>
+                <a href="vitar.html"><i class="fas fa-child" style="margin-right: 8px;"></i> Вівтарна дружина</a>
+                <a href="apostolstvo.html"><i class="fas fa-cross" style="margin-right: 8px;"></i> Апостольство доброї смерті</a>
+            </div>
+        </div>
+        <a href="interesting.html">Цікаво знати</a>
+        <a href="contacts.html">Контакти</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="https://www.facebook.com/groups/parafialypivka" target="_blank" class="social-link fb">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/parafia_voskresinnia/" target="_blank" class="social-link ig">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+</div>
+
+<div class="hero">
+    <img src="church-hero.jpg" alt="Церква Воскресіння" class="hero-img">
+</div>
+
+<footer>
+    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+        <div>
+            <h3 style="color: var(--primary-gold); margin-bottom: 20px;">Парафія Воскресіння</h3>
+            <p style="font-size: 14px; line-height: 1.6; opacity: 0.8;">Духовний осередок громади с. Липівка.</p>
+        </div>
+        <div>
+            <h3 style="color: var(--primary-gold); margin-bottom: 20px;">Швидкий доступ</h3>
+            <ul style="list-style: none; padding: 0; font-size: 14px; line-height: 2;">
+                <li><a href="history.html" style="color: white; text-decoration: none;">Історія парафії</a></li>
+                <li><a href="monastery.html" style="color: white; text-decoration: none;">Урочище Монастир</a></li>
+                <li><a href="news.html" style="color: white; text-decoration: none;">Новини</a></li>
+                <li><a href="interesting.html" style="color: white; text-decoration: none;">Цікаво знати</a></li>
+                <li><a href="contacts.html" style="color: white; text-decoration: none;">Контакти</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 style="color: var(--primary-gold); margin-bottom: 20px;">Ми в соцмережах</h3>
+            <div style="display: flex; gap: 20px;">
+                <a href="https://www.facebook.com/groups/parafialypivka" target="_blank" style="color: white; font-size: 24px;">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/parafia_voskresinnia/" target="_blank" style="color: white; font-size: 24px;">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 12px; opacity: 0.5;">
+        &copy; 2026 Парафія Воскресіння Христового. Всі права захищені.
+    </div>
+</footer>
+
+<button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+    style="position: fixed; bottom: 30px; right: 30px; background: var(--primary-gold); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; display: none; z-index: 2000;">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+    window.onscroll = function() {
+        let btn = document.getElementById("scrollTopBtn");
+        if (btn) {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+    };
+</script>
+
+</body>
+</html>
