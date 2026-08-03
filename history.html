@@ -23,11 +23,18 @@
         }
 
         /* Стилі навігації копіюємо з головної */
-        .navbar { display: flex; justify-content: space-between; align-items: center; background: var(--white); padding: 15px 50px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .navbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; row-gap: 10px; background: var(--white); padding: 15px 50px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
         .logo { font-weight: 700; color: var(--dark-gold); text-decoration: none; display: flex; align-items: center; gap: 12px; }
-        .menu { display: flex; align-items: center; }
+        .menu { display: flex; align-items: center; flex-wrap: wrap; justify-content: center; }
         .menu a { margin: 0 15px; text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 14px; }
         .menu a:hover { color: var(--primary-gold); }
+
+        @media (max-width: 700px) {
+            .navbar { padding: 15px 20px; justify-content: center; }
+            .menu a { margin: 5px 10px; font-size: 13px; }
+            .content-section { padding: 25px; margin: 30px auto; }
+            .page-header { padding: 70px 15px; }
+        }
 
         /* Заголовок сторінки */
         .page-header {
