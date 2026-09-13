@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://parafia-lypivka.onrender.com/sitemap.xml
