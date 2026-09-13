@@ -30,10 +30,8 @@
         /* Навігація */
         .navbar {
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            row-gap: 12px;
             background-color: var(--white);
             padding: 15px 50px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -129,6 +127,16 @@
             gap: 20px;
         }
 
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--dark-gold);
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+
         .social-link {
             font-size: 22px;
             transition: var(--transition);
@@ -189,9 +197,27 @@
         }
 
         @media (max-width: 900px) {
-            .navbar { padding: 15px 20px; justify-content: center; }
-            .menu { flex-wrap: wrap; justify-content: center; }
-            .nav-right { gap: 15px; }
+            .navbar { padding: 15px 20px; }
+            .hamburger { display: block; }
+            .menu {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                order: 3;
+            }
+            .menu.open { display: flex; }
+            .menu a { margin: 10px 0; }
+            .dropdown { width: 100%; text-align: center; }
+            .dropdown-content {
+                display: none;
+                position: static;
+                box-shadow: none;
+                border-top: none;
+                padding-left: 0;
+            }
+            .dropdown.open .dropdown-content { display: block; }
+            .dropdown-content a { padding: 10px 0; }
         }
 
         @media (max-width: 600px) {
@@ -216,13 +242,13 @@
         </div>
     </a>
 
-    <div class="menu">
+    <div class="menu" id="mainMenu">
         <a href="history.html">Історія парафії</a>
         <a href="monastery.html">Урочище Монастир</a>
         <a href="news.html">Новини</a>
         
-        <div class="dropdown">
-            <span class="dropbtn">Спільноти <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i></span>
+        <div class="dropdown" id="communitiesDropdown">
+            <span class="dropbtn" onclick="document.getElementById('communitiesDropdown').classList.toggle('open')">Спільноти <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i></span>
             <div class="dropdown-content">
                 <a href="umh.html"><i class="fas fa-users" style="margin-right: 8px;"></i> УМХ</a>
                 <a href="mothers.html"><i class="fas fa-hands-praying" style="margin-right: 8px;"></i> Матері в молитві</a>
@@ -241,6 +267,9 @@
         <a href="https://www.instagram.com/parafia_voskresinnia/" target="_blank" class="social-link ig">
             <i class="fab fa-instagram"></i>
         </a>
+        <button class="hamburger" onclick="document.getElementById('mainMenu').classList.toggle('open')" aria-label="Меню">
+            <i class="fas fa-bars"></i>
+        </button>
     </div>
 </div>
 
