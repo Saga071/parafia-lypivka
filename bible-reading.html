@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Як читати Святе Письмо - Липівка</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --dark-gold: #B8860B;
+            --text-dark: #1a252f;
+        }
+
+        body { margin: 0; font-family: 'Montserrat', sans-serif; line-height: 1.8; color: var(--text-dark); background-color: #fcfcfc; }
+
+        .navbar { display: flex; justify-content: space-between; align-items: center; background: var(--white); padding: 15px 50px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-weight: 700; color: var(--dark-gold); text-decoration: none; display: flex; align-items: center; gap: 12px; }
+        .menu { display: flex; align-items: center; }
+        .menu a { margin: 0 15px; text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 14px; }
+        .menu a:hover { color: var(--primary-gold); }
+
+        .hamburger { display: none; background: none; border: none; font-size: 24px; color: var(--dark-gold); cursor: pointer; padding: 5px 10px; }
+
+        @media (max-width: 700px) {
+            .navbar { padding: 15px 20px; }
+            .hamburger { display: block; }
+            .menu { display: none; width: 100%; flex-direction: column; align-items: center; }
+            .menu.open { display: flex; }
+            .menu a { margin: 10px 0; }
+            .content-section { padding: 25px; margin: 30px auto; }
+            .page-header { padding: 70px 15px; }
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('church-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .content-section {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        h2 { color: var(--dark-gold); border-bottom: 2px solid var(--primary-gold); display: inline-block; margin-bottom: 20px; }
+        h3 { color: var(--dark-gold); margin-top: 30px; }
+
+        .prayer-block {
+            margin: 30px 0;
+            border-left: 4px solid var(--primary-gold);
+            padding: 20px;
+            background: #fdfaf2;
+            border-radius: 0 10px 10px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        .info-box {
+            margin: 20px 0;
+            background: #f9f7f2;
+            border-left: 4px solid var(--primary-gold);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .dates-line {
+            color: #888;
+            font-size: 14px;
+            margin-top: -15px;
+            margin-bottom: 25px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: var(--dark-gold);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { transform: translateX(-5px); }
+
+        footer { background: #1a252f; color: white; padding: 40px 50px; text-align: center; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html" class="logo">
+        <i class="fas fa-church"></i>
+        <div>ВОСКРЕСІННЯ ХРИСТОВОГО <span>с. Липівка</span></div>
+    </a>
+    <div class="menu" id="mainMenu">
+        <a href="index.html">Головна</a>
+        <a href="history.html">Історія парафії</a>
+        <a href="monastery.html">Урочище Монастир</a>
+        <a href="interesting.html" style="color: var(--primary-gold);">Цікаво знати</a>
+        <a href="contacts.html">Контакти</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mainMenu').classList.toggle('open')" aria-label="Меню">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+
+<div class="page-header">
+    <h1>Як правильно читати і розуміти Святе Письмо</h1>
+    <p>Поради для щоденного духовного читання</p>
+</div>
+
+<div class="content-section">
+    <p>Читання Святого Письма – це не просто ознайомлення з текстом чи перегляд сторінок. Для християнина це можливість зустрітися з Богом через Його Слово, почути Його, краще пізнати Його волю та побачити, як Євангеліє може змінювати наше життя.</p>
+
+    <p>Ось кілька порад, які допоможуть зробити читання Біблії більш усвідомленим і плідним.</p>
+
+    <h3>Визначте час і місце для читання</h3>
+    <p>Добре мати конкретний час, коли ви можете спокійно побути зі Святим Письмом. Це може бути ранок, вечір або інший зручний момент. Навіть 10-15 хвилин щоденного уважного читання можуть принести більше користі, ніж тривале, але поверхневе читання. Важливо створити умови, у яких ніщо не відволікатиме вас від молитви та роздумів.</p>
+
+    <h3>Починайте читання з молитви</h3>
+    <p>Перед тим як відкрити Святе Письмо, зверніться до Бога і попросіть Його дати вам мудрість, розуміння та відкрите серце. Молитва допомагає нам читати Біблію не просто як звичайну книгу, а як Слово, через яке Господь може промовляти до нас.</p>
+
+    <h3>Читайте уважно і намагайтеся зрозуміти прочитане</h3>
+    <p>Не варто гнатися за кількістю прочитаних сторінок. Краще уважно прочитати один уривок і замислитися над ним, ніж прочитати багато, нічого не запам'ятавши. Під час читання можна поставити собі кілька запитань: Що цей текст говорить мені про Бога? Чого він навчає мене про людину? До чого Господь закликає мене? Як я можу застосувати це у своєму житті?</p>
+
+    <h3>Використовуйте пояснення, коментарі та біблійні словники</h3>
+    <p>Не все у Святому Письмі можна одразу зрозуміти без додаткових пояснень. Для глибшого розуміння корисно звертатися до біблійних коментарів, словників та інших перевірених джерел. Історичний, культурний та релігійний контекст допомагає краще зрозуміти, чому Христос говорив ті чи інші притчі, що означали певні звичаї або чому окремі приписи Старого Завіту мали таке значення для людей того часу.</p>
+
+    <h3>Записуйте те, що вас особливо вразило</h3>
+    <p>Можна вести невеликий духовний щоденник, у якому записувати важливі думки, запитання, уривки, які особливо торкнулися вашого серця. Через певний час ви зможете повернутися до своїх записів і побачити, які слова Святого Письма допомогли вам у конкретних життєвих ситуаціях.</p>
+
+    <h3>Обговорюйте Святе Письмо з іншими</h3>
+    <p>Біблія не повинна бути для нас книгою, яку ми читаємо лише наодинці. Дуже корисно ділитися своїми думками з іншими християнами, брати участь у біблійних зустрічах чи спільнотах. Інша людина може звернути увагу на те, чого ми самі не помітили, і допомогти глибше зрозуміти прочитаний текст.</p>
+
+    <h3>Намагайтеся застосовувати прочитане у своєму житті</h3>
+    <p>Святе Письмо приносить плід не тоді, коли ми просто знаємо багато біблійних цитат, а тоді, коли починаємо жити відповідно до Божого Слова. Якщо Євангеліє закликає нас прощати – потрібно вчитися прощати, якщо закликає допомагати ближньому – потрібно допомагати. Кожен добрий вчинок, молитва, прояв милосердя та любові стають практичним втіленням Божого Слова.</p>
+
+    <h3>Ніколи не пізно почати читати Святе Письмо</h3>
+    <p>Не має значення, скільки вам років і чи читали ви Біблію раніше. Почати можна у будь-якому віці. Навіть якщо вам здається, що ви вже багато чого втратили, сьогодні завжди є можливість відкрити Святе Письмо і зробити перший крок.</p>
+
+    <h3>Не бійтеся запитувати, якщо чогось не розумієте</h3>
+    <p>У Святому Письмі є складні місця, які потребують пояснення. Якщо вам щось незрозуміло, не потрібно соромитися запитувати. Можна звернутися до настоятеля, священника, монаха чи монахині, які допоможуть краще зрозуміти текст та його значення.</p>
+
+    <h3>Найважливіше – просто почати</h3>
+    <p>Не потрібно чекати особливого моменту, ідеальних умов чи великої кількості вільного часу. Візьміть Святе Письмо і почніть читати. Якщо ви зможете щодня приділяти цьому хоча б трохи часу і протримаєтеся так протягом року, читання Біблії поступово стане частиною вашого життя. А разом із постійністю Господь дасть і бажання, і можливість, і час продовжувати читати Його Слово в наступні роки. Головне – зробити перший крок і не зупинятися.</p>
+
+    <a href="interesting.html" class="back-btn"><i class="fas fa-arrow-left"></i> Назад до "Цікаво знати"</a>
+</div>
+
+<footer>
+    <p>&copy; 2026 Парафія Воскресіння Христового. Всі права захищені.</p>
+</footer>
+
+</body>
+</html>

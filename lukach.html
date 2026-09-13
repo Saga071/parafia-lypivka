@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Симеон Лукач - Липівка</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --dark-gold: #B8860B;
+            --text-dark: #1a252f;
+        }
+
+        body { margin: 0; font-family: 'Montserrat', sans-serif; line-height: 1.8; color: var(--text-dark); background-color: #fcfcfc; }
+
+        .navbar { display: flex; justify-content: space-between; align-items: center; background: var(--white); padding: 15px 50px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-weight: 700; color: var(--dark-gold); text-decoration: none; display: flex; align-items: center; gap: 12px; }
+        .menu { display: flex; align-items: center; }
+        .menu a { margin: 0 15px; text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 14px; }
+        .menu a:hover { color: var(--primary-gold); }
+
+        .hamburger { display: none; background: none; border: none; font-size: 24px; color: var(--dark-gold); cursor: pointer; padding: 5px 10px; }
+
+        @media (max-width: 700px) {
+            .navbar { padding: 15px 20px; }
+            .hamburger { display: block; }
+            .menu { display: none; width: 100%; flex-direction: column; align-items: center; }
+            .menu.open { display: flex; }
+            .menu a { margin: 10px 0; }
+            .content-section { padding: 25px; margin: 30px auto; }
+            .page-header { padding: 70px 15px; }
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('church-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .content-section {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        h2 { color: var(--dark-gold); border-bottom: 2px solid var(--primary-gold); display: inline-block; margin-bottom: 20px; }
+        h3 { color: var(--dark-gold); margin-top: 30px; }
+
+        .prayer-block {
+            margin: 30px 0;
+            border-left: 4px solid var(--primary-gold);
+            padding: 20px;
+            background: #fdfaf2;
+            border-radius: 0 10px 10px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        .info-box {
+            margin: 20px 0;
+            background: #f9f7f2;
+            border-left: 4px solid var(--primary-gold);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .dates-line {
+            color: #888;
+            font-size: 14px;
+            margin-top: -15px;
+            margin-bottom: 25px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: var(--dark-gold);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { transform: translateX(-5px); }
+
+        footer { background: #1a252f; color: white; padding: 40px 50px; text-align: center; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html" class="logo">
+        <i class="fas fa-church"></i>
+        <div>ВОСКРЕСІННЯ ХРИСТОВОГО <span>с. Липівка</span></div>
+    </a>
+    <div class="menu" id="mainMenu">
+        <a href="index.html">Головна</a>
+        <a href="history.html">Історія парафії</a>
+        <a href="monastery.html">Урочище Монастир</a>
+        <a href="interesting.html" style="color: var(--primary-gold);">Цікаво знати</a>
+        <a href="contacts.html">Контакти</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mainMenu').classList.toggle('open')" aria-label="Меню">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+
+<div class="page-header">
+    <h1>Блаженний владика Симеон Лукач</h1>
+    <p>Священник нашого краю, підпільний єпископ УГКЦ</p>
+</div>
+
+<div class="content-section">
+    <p class="dates-line">7 липня 1893, Старуня — 22 серпня 1964, Старуня. Проголошений блаженним 27 червня 2001 року</p>
+
+    <p>Симеон Лукач – релігійний діяч, педагог, підпільний єпископ Української греко-католицької церкви.</p>
+
+    <p>Народився Симеон Лукач 7 липня 1893 року в селі Старуня Богородчанського повіту (донедавна Солотвинського району Івано-Франківської області). Допитливий селянський син мав величезний нахил до науки. Ще коли навчався в школі в рідному селі, а згодом – в Богородчанах, два роки навчання зарахували за три.</p>
+
+    <p>У Коломийській гімназії вчився так добре, що завоював популярність як репетитор, і завдяки репетиторству міг самостійно оплатити навчання. А навчаючись у духовній семінарії, куди вступив 1913 року, став зразком молитовності. Щоправда, через Першу світову війну навчання у семінарії вдалося закінчити лише 1919 року.</p>
+
+    <p>Згодом, коли був уже священником в с. Ляцьке-Шляхетське біля Тлумача (нині – село Липівка), Симеона Лукача в грудні 1920 року призначили викладачем у рідній Станіславівській духовній семінарії, де працював до квітня 1945 року. На той час у семінарії був високий рівень викладацького складу. Серед викладачів тільки о. Симеон Лукач, який викладав моральне богослів'я та був духівником, не був доктором наук. Його лекції, спосіб життя, проповіді стали справжнім зразком священничого ідеалу. Отця Симеона потай від нього називали «магістром моральності».</p>
+
+    <p>Відчуваючи небезпеку для УГКЦ, перед своїм арештом блаженний єпископ Григорій (Хомишин) весною 1945 року таємно висвятив о. Симеона та ще двох осіб на єпископів. Оскільки свячення були повністю таємні, енкаведисти не знали про них і не заарештували нових єпископів одразу.</p>
+
+    <p>Переслідуваний владою, владика Симеон перебрався до рідного села, де жив у брата Василя до кінця лютого 1949 року. Не припиняв виконувати священничих обов'язків, душпастирювати. В Старуні відправляв Службу Божу спочатку в церкві, а пізніше – підпільно у своєму помешканні. В лютому 1949 року його викликали в сільську раду, погрожуючи виселенням із села. Тимчасово владика переїхав до Надвірної. Саме там за активну священничу працю та відмову перейти на «державне» православ'я його і заарештували працівники НКВД в жовтні 1949 року. Репресивна машина квапилася ізолювати небезпечного провідника якнайшвидше, не встигаючи навіть вчасно підготувати юридичну санкцію на арешт: ордер видали пізніше.</p>
+
+    <p>Засуджений на початку 1950 року на 10 років. Попри слабке здоров'я його скерували на непосильну роботу в табори Красноярського краю. Працював на лісоповалі. Витримав, щоб після звільнення 11 лютого 1955 року знову взятися за роботу – працю священика з щоденним служінням Богові й людям. Не став підліковуватись чи «сидіти тихо», як йому пропонували. Як інтелектуал, писав книгу «Ложні пророки». Таємно проводив навчання для майбутніх священиків… І їхав чи йшов всюди, де на нього чекали вірні.</p>
+
+    <p>Вдруге був заарештований у липні 1962 року. Після обшуку і конфіскації всіх речей, владику Симеона відіслали в тюрму до Івано-Франківська. У в'язниці владика важко захворів. Тюремні лікарі визначили, що це астма. Насправді це був туберкульоз легень.</p>
+
+    <p>У березні 1964 року через критичний стан здоров'я тюремники привезли владику Симеона помирати в рідне село Старуня. Незважаючи на важку хворобу, єпископ виконував свої священничі обов'язки: щодня служив Літургію, сповідав людей, суворо дотримувався посту.</p>
+
+    <div class="info-box">
+        <p style="margin:0;">22 серпня 1964 року помер в селі Старуня, де й похований. 27 червня 2001 року проголошений блаженним.</p>
+    </div>
+
+    <a href="interesting.html" class="back-btn"><i class="fas fa-arrow-left"></i> Назад до "Цікаво знати"</a>
+</div>
+
+<footer>
+    <p>&copy; 2026 Парафія Воскресіння Христового. Всі права захищені.</p>
+</footer>
+
+</body>
+</html>

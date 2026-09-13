@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Священномученик Йосафат Кунцевич - Липівка</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --dark-gold: #B8860B;
+            --text-dark: #1a252f;
+        }
+
+        body { margin: 0; font-family: 'Montserrat', sans-serif; line-height: 1.8; color: var(--text-dark); background-color: #fcfcfc; }
+
+        .navbar { display: flex; justify-content: space-between; align-items: center; background: var(--white); padding: 15px 50px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-weight: 700; color: var(--dark-gold); text-decoration: none; display: flex; align-items: center; gap: 12px; }
+        .menu { display: flex; align-items: center; }
+        .menu a { margin: 0 15px; text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 14px; }
+        .menu a:hover { color: var(--primary-gold); }
+
+        .hamburger { display: none; background: none; border: none; font-size: 24px; color: var(--dark-gold); cursor: pointer; padding: 5px 10px; }
+
+        @media (max-width: 700px) {
+            .navbar { padding: 15px 20px; }
+            .hamburger { display: block; }
+            .menu { display: none; width: 100%; flex-direction: column; align-items: center; }
+            .menu.open { display: flex; }
+            .menu a { margin: 10px 0; }
+            .content-section { padding: 25px; margin: 30px auto; }
+            .page-header { padding: 70px 15px; }
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('church-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .content-section {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        h2 { color: var(--dark-gold); border-bottom: 2px solid var(--primary-gold); display: inline-block; margin-bottom: 20px; }
+        h3 { color: var(--dark-gold); margin-top: 30px; }
+
+        .prayer-block {
+            margin: 30px 0;
+            border-left: 4px solid var(--primary-gold);
+            padding: 20px;
+            background: #fdfaf2;
+            border-radius: 0 10px 10px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: var(--dark-gold);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { transform: translateX(-5px); }
+
+        footer { background: #1a252f; color: white; padding: 40px 50px; text-align: center; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html" class="logo">
+        <i class="fas fa-church"></i>
+        <div>ВОСКРЕСІННЯ ХРИСТОВОГО <span>с. Липівка</span></div>
+    </a>
+    <div class="menu" id="mainMenu">
+        <a href="index.html">Головна</a>
+        <a href="history.html">Історія парафії</a>
+        <a href="monastery.html">Урочище Монастир</a>
+        <a href="interesting.html" style="color: var(--primary-gold);">Цікаво знати</a>
+        <a href="contacts.html">Контакти</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mainMenu').classList.toggle('open')" aria-label="Меню">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+
+<div class="page-header">
+    <h1>Священномученик Йосафат Кунцевич</h1>
+    <p>Покровитель нашого храму</p>
+</div>
+
+<div class="content-section">
+    <p>Іван Кунцевич, який у чернецтві отримав ім'я Йосафат, народився 1580 року у Володимирі-Волинському в міщанській родині Гавриїла та Марії. Таїнство Хрещення він прийняв у місцевій церкві святої Параскеви П'ятниці. Саме у Володимирі минули його дитинство та юність. У 1596 році, коли Іванові було шістнадцять років, батьки віддали його до Вільна, де він мав навчатися купецького ремесла у відомого купця Якинта Поповича. Проте Іван не захотів присвятити своє життя торгівлі. Незважаючи на вмовляння свого наставника, він залишив купецьку справу, відчувши поклик до служіння Богові та прагнучи здобувати не земні багатства, а духовні чесноти.</p>
+
+    <p>У 1604 році Іван вступив до занедбаного монастиря Пресвятої Трійці у Вільні. Там Київський митрополит Іпатій Потій прийняв його до монашої спільноти та здійснив чернечий постриг. Відтоді він отримав ім'я Йосафат. У 1609 році митрополит Іпатій Потій висвятив Йосафата на священника. Своєю проповіддю, богословськими науками, добрим словом та милосердям він привертав багатьох людей до Київської Унійної Церкви. Його діяльність приносила значні плоди, однак викликала і сильний спротив противників Унії. Через те, що Йосафат своєю діяльністю сприяв наверненню багатьох людей до єдності з Католицькою Церквою, противники називали його «душехватом».</p>
+
+    <p>У 1613 році, за дорученням митрополита Вельямина Рутського, Йосафат став ігуменом Битенського монастиря. Через два роки, у 1615 році, його призначили єпископом-помічником Полоцької архиєпархії. Після смерті архиєпископа Гедеона у 1618 році Йосафат став Полоцьким архиєпископом. На цьому служінні він активно працював над духовним відновленням Церкви, дбав про освіту духовенства, поширення християнського вчення та утвердження церковної єдності.</p>
+
+    <p>12 листопада 1623 року, в неділю, Йосафат Кунцевич загинув мученицькою смертю. Його смерть стала свідченням вірності Христові та Церкві. Як свідчить церковна традиція, його мученицька смерть принесла справі церковної єдності ще більше плодів, ніж його багаторічне служіння за життя. 16 травня 1643 року Папа Урбан VIII проголосив Йосафата Кунцевича блаженним. Уже 12 листопада 1644 року в Римі вперше урочисто відзначили його літургійну пам'ять. А 29 червня 1867 року Папа Пій IX урочисто канонізував Йосафата Кунцевича, зарахувавши його до лику святих мучеників.</p>
+
+    <h3>Молитва до св. Йосафата (Кунцевича)</h3>
+
+    <div class="prayer-block">
+        <p>Великий мученику Христовий, Йосафате, чудовий взоре християнської досконалості і непереможний апостоле з'єднання Церков! Ти з любові до Бога не відказався ні від яких праць і трудів, і навіть радо пролляв кров і віддав своє життя. Благаємо тебе, святий покровителю й отче, заступайся за нас і випроси нам непохитності у святій католицькій вірі й ревності за спасіння наших власних душ, душ наших родин, знайомих і всіх людей.</p>
+
+        <p>Святий сященномученику Йосафате, згадай, що ти брат наш із крові й кості, тому заступайся в Бога за народ, з якого ти вийшов. Вчини, наш святий покровителю, своїми могутніми молитвами, щоб у всьому українському народі настала єдність у святій вірі, щоб усі стали дітьми одної Христової Церкви та щоб наш народ, збагачений дочасним й вічним благословенням, прославляв Бога, Який нагородив тебе нев'янучим вінком слави у Своєму Небесному Царстві, Якому належить слава, честь і поклін. Отцю і Сину і Святому Духові, нині і повсяк час, і на віки вічні. Амінь.</p>
+    </div>
+
+    <a href="interesting.html" class="back-btn"><i class="fas fa-arrow-left"></i> Назад до "Цікаво знати"</a>
+</div>
+
+<footer>
+    <p>&copy; 2026 Парафія Воскресіння Христового. Всі права захищені.</p>
+</footer>
+
+</body>
+</html>

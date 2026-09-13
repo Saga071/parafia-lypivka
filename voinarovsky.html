@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тит Войнаровський - Липівка</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --dark-gold: #B8860B;
+            --text-dark: #1a252f;
+        }
+
+        body { margin: 0; font-family: 'Montserrat', sans-serif; line-height: 1.8; color: var(--text-dark); background-color: #fcfcfc; }
+
+        .navbar { display: flex; justify-content: space-between; align-items: center; background: var(--white); padding: 15px 50px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-weight: 700; color: var(--dark-gold); text-decoration: none; display: flex; align-items: center; gap: 12px; }
+        .menu { display: flex; align-items: center; }
+        .menu a { margin: 0 15px; text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 14px; }
+        .menu a:hover { color: var(--primary-gold); }
+
+        .hamburger { display: none; background: none; border: none; font-size: 24px; color: var(--dark-gold); cursor: pointer; padding: 5px 10px; }
+
+        @media (max-width: 700px) {
+            .navbar { padding: 15px 20px; }
+            .hamburger { display: block; }
+            .menu { display: none; width: 100%; flex-direction: column; align-items: center; }
+            .menu.open { display: flex; }
+            .menu a { margin: 10px 0; }
+            .content-section { padding: 25px; margin: 30px auto; }
+            .page-header { padding: 70px 15px; }
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('church-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .content-section {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        h2 { color: var(--dark-gold); border-bottom: 2px solid var(--primary-gold); display: inline-block; margin-bottom: 20px; }
+        h3 { color: var(--dark-gold); margin-top: 30px; }
+
+        .prayer-block {
+            margin: 30px 0;
+            border-left: 4px solid var(--primary-gold);
+            padding: 20px;
+            background: #fdfaf2;
+            border-radius: 0 10px 10px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        .info-box {
+            margin: 20px 0;
+            background: #f9f7f2;
+            border-left: 4px solid var(--primary-gold);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .dates-line {
+            color: #888;
+            font-size: 14px;
+            margin-top: -15px;
+            margin-bottom: 25px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: var(--dark-gold);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { transform: translateX(-5px); }
+
+        footer { background: #1a252f; color: white; padding: 40px 50px; text-align: center; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html" class="logo">
+        <i class="fas fa-church"></i>
+        <div>ВОСКРЕСІННЯ ХРИСТОВОГО <span>с. Липівка</span></div>
+    </a>
+    <div class="menu" id="mainMenu">
+        <a href="index.html">Головна</a>
+        <a href="history.html">Історія парафії</a>
+        <a href="monastery.html">Урочище Монастир</a>
+        <a href="interesting.html" style="color: var(--primary-gold);">Цікаво знати</a>
+        <a href="contacts.html">Контакти</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mainMenu').classList.toggle('open')" aria-label="Меню">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+
+<div class="page-header">
+    <h1>Тит Войнаровський</h1>
+    <p>Уродженець Липівки — священник, громадський і політичний діяч</p>
+</div>
+
+<div class="content-section">
+    <p class="dates-line">16 лютого 1856 — 21 лютого 1938</p>
+
+    <p>Народився 16 лютого 1856 року в с. Ляцьке Шляхетське (сучасна Липівка) Тисменицького повіту в сім'ї о. Петра (1822-1894) і Франциски з Лопатинських.</p>
+
+    <p>Закінчив цісарсько-королівську гімназію у Станиславові. Вивчав богослов'я у Львові в семінарії та на богословському факультеті університету. У 1881 році висвячений на одруженого священника (дружина з роду Шепаровичів – Емілія Шепарович; тесть був парохом в селі Олеша, Товмацького повіту; сучасний прикарпатський поет Богдан Гасюк походить з роду Шепаровичів-Кузмів), та, однак через рік став удівцем. Спочатку працював на Станиславівщині в селах: Колодіївка (сотрудник 1882-1884), Кулачківці (адміністратор 1886-1887), П'ядики (1887-1892), Топорівці (1892-1893), Балинці (1893-1909). У 1909 році переведений до клиру Львівської архиєпархії.</p>
+
+    <p><strong>Церковні посади:</strong> митрат, кустос Львівської греко-католицької капітули, довголітній адміністратор митрополичих дібр. У 1929 році обраний членом історично-правничої секції Богословського наукового товариства у Львові. Почесний доктор економічних наук Української Господарської Академії у Подебрадах.</p>
+
+    <p>Посол до віденського парламенту від Української національно-демократичної партії (1907-1911) у 56-му двомандатному виборчому окрузі (сільські громади судових повітів Печеніжин, Коломия, Жаб'є, Кути, Косів, Яблунів, Заболотів, Гвіздець і Отинія). На виборах випередив кандидата-москвофіла Володимира Дудикевича. Його заступником обрали радикала Павла Лаврука, але о. Войнаровський волів бачити ним д-ра Олександра Кульчицького – директора товариства «Покупський Союз» у Коломиї.</p>
+
+    <p>Засновник парцеляційного товариства «Земля» (1908) і Земельного Гіпотечного Банку. Визначний діяч товариства «Сільський Господар» у Львові: заступник голови у 1918-1921 роках, голова товариства в 1929-1936. Заступник голови Львівської Хліборобської Палати (1934-1936).</p>
+
+    <div class="info-box">
+        <p style="margin:0;">Завдяки заходам Войнаровського між українськими селянами розпарцельовано близько 40 000 морґів землі дідичів. Багато зробив для організації фахової сільськогосподарської освіти для українського селянства.</p>
+    </div>
+
+    <p>Помер у Львові 21 лютого 1938 року і був похований у гробниці галицьких митрополитів і крилошан на Личаківському цвинтарі.</p>
+
+    <a href="interesting.html" class="back-btn"><i class="fas fa-arrow-left"></i> Назад до "Цікаво знати"</a>
+</div>
+
+<footer>
+    <p>&copy; 2026 Парафія Воскресіння Христового. Всі права захищені.</p>
+</footer>
+
+</body>
+</html>
