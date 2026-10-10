@@ -69,11 +69,17 @@
             color: var(--text-dark);
             font-weight: 600;
             font-size: 14px;
+            line-height: 1;
             transition: var(--transition);
             cursor: pointer;
             border: none;
             background: none;
             padding: 5px 0;
+        }
+
+        .dropbtn {
+            display: inline-flex;
+            align-items: center;
         }
 
         .menu a:hover, .dropdown:hover .dropbtn {
@@ -237,13 +243,14 @@
     <a href="#" class="logo">
         <i class="fas fa-church" style="font-size: 28px;"></i>
         <div>
-            <span>Парафія Святого Воскресіння Христового УГКЦ с. Липівка</span>
+            <span>Парафія Святого Воскресіння Христового, с. Липівка</span>
         </div>
     </a>
 
     <div class="menu" id="mainMenu">
         <a href="history.html">Історія парафії</a>
         <a href="monastery.html">Урочище Монастир</a>
+        <a href="daughter-churches.html">Дочірні храми</a>
         <a href="news.html">Новини</a>
         
         <div class="dropdown" id="communitiesDropdown">
@@ -283,6 +290,7 @@
             <ul style="list-style: none; padding: 0; font-size: 14px; line-height: 2;">
                 <li><a href="history.html" style="color: white; text-decoration: none;">Історія парафії</a></li>
                 <li><a href="monastery.html" style="color: white; text-decoration: none;">Урочище Монастир</a></li>
+                <li><a href="daughter-churches.html" style="color: white; text-decoration: none;">Дочірні храми</a></li>
                 <li><a href="news.html" style="color: white; text-decoration: none;">Новини</a></li>
                 <li><a href="interesting.html" style="color: white; text-decoration: none;">Цікаво знати</a></li>
                 <li><a href="contacts.html" style="color: white; text-decoration: none;">Контакти</a></li>
