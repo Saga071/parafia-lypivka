@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дочірні храми - Парафія Воскресіння Христового</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --dark-gold: #B8860B;
+            --text-dark: #1a252f;
+        }
+
+        body { margin: 0; font-family: 'Montserrat', sans-serif; line-height: 1.8; color: var(--text-dark); background-color: #fcfcfc; }
+
+        .navbar { display: flex; justify-content: space-between; align-items: center; background: var(--white); padding: 15px 50px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-weight: 700; color: var(--dark-gold); text-decoration: none; display: flex; align-items: center; gap: 12px; }
+        .menu { display: flex; align-items: center; }
+        .menu a { margin: 0 15px; text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 14px; }
+        .menu a:hover { color: var(--primary-gold); }
+
+        .hamburger { display: none; background: none; border: none; font-size: 24px; color: var(--dark-gold); cursor: pointer; padding: 5px 10px; }
+
+        @media (max-width: 700px) {
+            .navbar { padding: 15px 20px; flex-wrap: wrap; }
+            .hamburger { display: block; }
+            .menu { display: none; width: 100%; flex-direction: column; align-items: center; }
+            .menu.open { display: flex; }
+            .menu a { margin: 10px 0; }
+            .content-section { padding: 25px; margin: 30px auto; }
+            .page-header { padding: 70px 15px; }
+            .tab-buttons { flex-direction: column; }
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('church-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .content-section {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        h2 { color: var(--dark-gold); border-bottom: 2px solid var(--primary-gold); display: inline-block; margin-bottom: 20px; }
+        h3 { color: var(--dark-gold); margin-top: 30px; }
+
+        .tab-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .tab-btn {
+            flex: 1;
+            background: #f9f7f2;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 16px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--text-dark);
+            cursor: pointer;
+            transition: 0.25s;
+            text-align: center;
+        }
+
+        .tab-btn i { display: block; font-size: 20px; margin-bottom: 8px; color: var(--dark-gold); }
+
+        .tab-btn:hover { background: #fff3d6; }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+            color: white;
+            border-color: var(--dark-gold);
+        }
+
+        .tab-btn.active i { color: white; }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        .photo-block { margin: 30px 0; text-align: center; }
+        .photo-block img { max-width: 400px; width: 100%; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .photo-block p { font-size: 13px; color: #999; margin-top: 10px; font-style: italic; }
+
+        .photo-row { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin: 30px 0; }
+        .photo-row .photo-block { flex: 1; min-width: 220px; max-width: 280px; margin: 0; }
+        .photo-row .photo-block img { max-width: 100%; height: 300px; object-fit: cover; }
+
+        .info-box {
+            margin: 20px 0;
+            background: #f9f7f2;
+            border-left: 4px solid var(--primary-gold);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: var(--dark-gold);
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { transform: translateX(-5px); }
+
+        footer { background: #1a252f; color: white; padding: 40px 50px; text-align: center; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html" class="logo">
+        <i class="fas fa-church"></i>
+        <div>Парафія Святого Воскресіння Христового, <span>с. Липівка</span></div>
+    </a>
+    <div class="menu" id="mainMenu">
+        <a href="index.html">Головна</a>
+        <a href="history.html">Історія парафії</a>
+        <a href="monastery.html">Урочище Монастир</a>
+        <a href="daughter-churches.html" style="color: var(--primary-gold);">Дочірні храми</a>
+        <a href="interesting.html">Цікаво знати</a>
+        <a href="contacts.html">Контакти</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mainMenu').classList.toggle('open')" aria-label="Меню">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+
+<div class="page-header">
+    <h1>Дочірні храми</h1>
+    <p>Святині сусідніх сіл нашої парафії</p>
+</div>
+
+<div class="content-section">
+
+    <div class="tab-buttons">
+        <button class="tab-btn active" onclick="showTab('nova-lypivka', this)">
+            <i class="fas fa-church"></i>
+            Храм Пресвятої Трійці, с. Нова Липівка
+        </button>
+        <button class="tab-btn" onclick="showTab('studynets', this)">
+            <i class="fas fa-archway"></i>
+            Богослужбова каплиця Трьох Святителів, с. Студинець
+        </button>
+    </div>
+
+    <!-- ========== НОВА ЛИПІВКА ========== -->
+    <div id="nova-lypivka" class="tab-content active">
+        <h2>Храм Пресвятої Трійці, с. Нова Липівка</h2>
+
+        <p>Церква у Новій Липівці — це реставрована дерев'яна німецька кірха, збудована у 1904 році. Її історія тісно пов'язана з німецькою колонізацією Галичини та поселенням німців у цій місцевості. До 1939 року тут проживали німці, а сама місцевість була відома як Сітанерівка. У давні часи територія сучасної Нової Липівки була присілком села Ляцьке, яке згодом перейменували на Липівку. Під час німецької колонізації Галичини тут почали оселятися німецькі поселенці, які прибували до Липівки.</p>
+
+        <p>Дерев'яна кірха, яка збереглася у Сітанерівці, є важливою пам'яткою історії цієї місцевості. Інформацію про храм надав дослідник Андрій Костишин. Єдина згадка про кірху в тогочасній літературі була виявлена ним у путівнику О. Федоріва «Івано-Франківськ та область».</p>
+
+        <div class="photo-block">
+            <img src="photos/nova-lypivka-1.jpg" alt="Стан храму до реставрації, 2008 р.">
+            <p>Стан храму до реставрації, 2008 р.</p>
+        </div>
+
+        <p>Новий етап в історії храму розпочався навесні 2002 року. Саме тоді ієромонахи Никодим Гуралюк та Порфирій Шумило, прямуючи з Погінською іконою Божої Матері, зупинилися біля старої церкви. Біля храму вони звершили молебень до Пресвятої Богородиці. Ця молитва стала своєрідним духовним поштовхом до подальшого відновлення святині та повернення їй належного місця в житті громади. Восени 2004 року на подвір'ї храму було встановлено Хрест, який освятив о. Василь Фіголь. Встановлення Хреста стало ще одним кроком у відродженні святого місця та нагадуванням про його духовне призначення.</p>
+
+        <p>У 2013 році розпочато недільні святі Літургії біля хреста та відновлювальні роботи храму. Давню дерев'яну споруду поступово почали повертати до життя, зберігаючи її історичну основу та водночас готуючи храм до нового духовного служіння. Відновлення стало можливим завдяки праці та жертовності людей, які долучалися до відродження святині.</p>
+
+        <div class="photo-row">
+            <div class="photo-block"><img src="photos/nova-lypivka-2.jpg" alt="Відновлювальні роботи"></div>
+            <div class="photo-block"><img src="photos/nova-lypivka-3.jpg" alt="Відновлювальні роботи"></div>
+            <div class="photo-block"><img src="photos/nova-lypivka-4.jpg" alt="Відновлювальні роботи"></div>
+        </div>
+        <p style="text-align: center; font-size: 13px; color: #999; font-style: italic; margin-top: -20px;">Відновлювальні роботи</p>
+
+        <p>Важливою подією в історії відновленого храму стало 29 червня 2014 року. Цього дня у храмі була звершена перша Свята Літургія. Божественну Літургію очолив о. Андрій Кудлик. Ця подія стала особливим моментом у відродженні храму: після багатьох років тиші у його стінах знову залунала молитва Христової Церкви.</p>
+
+        <div class="photo-block">
+            <img src="photos/nova-lypivka-5.jpg" alt="Перша Свята Літургія у храмі">
+            <p>Перша Свята Літургія у храмі</p>
+        </div>
+
+        <p>11 червня 2017 року відбулася важлива подія — освячення храму. Чин освячення звершив Преосвященний владика Йосафат Мощич, єпископ Івано-Франківський.</p>
+
+        <div class="photo-row">
+            <div class="photo-block"><img src="photos/nova-lypivka-6.jpg" alt="Фото освячення храму"></div>
+            <div class="photo-block"><img src="photos/nova-lypivka-7.jpg" alt="Фото освячення храму"></div>
+            <div class="photo-block"><img src="photos/nova-lypivka-8.jpg" alt="Фото освячення храму"></div>
+        </div>
+        <p style="text-align: center; font-size: 13px; color: #999; font-style: italic; margin-top: -20px;">Фото освячення храму</p>
+
+        <p>Наступним важливим етапом стало встановлення та освячення іконостасу. 17 листопада 2021 року у храмі відбулося освячення іконостасу. Моління очолив Кир Володимир Війтишин, Архієпископ і Митрополит Івано-Франківський. Освячення іконостасу стало ще однією важливою сторінкою в історії відродження храму. Іконостас не лише прикрасив святиню, але й став невід'ємною частиною її літургійного простору, допомагаючи молитовно переживати таїнство Божественної Літургії.</p>
+
+        <div class="photo-row">
+            <div class="photo-block"><img src="photos/nova-lypivka-9.jpg" alt="Фото освячення іконостасу"></div>
+            <div class="photo-block"><img src="photos/nova-lypivka-10.jpg" alt="Фото освячення іконостасу"></div>
+        </div>
+        <p style="text-align: center; font-size: 13px; color: #999; font-style: italic; margin-top: -20px;">Фото освячення іконостасу</p>
+
+        <p>Сьогодні храм у Новій Липівці є свідком складної історії цієї місцевості та водночас знаком її духовного відродження. Від німецької кірхи початку ХХ століття до відновленої святині, у якій знову звершується молитва, Літургія та церковне життя, храм пройшов довгий шлях. Його історія — це не лише історія дерев'яної споруди. Це історія пам'яті, молитви та людей, завдяки яким давня святиня отримала нове життя.</p>
+
+        <div class="photo-block">
+            <img src="photos/nova-lypivka-11.jpg" alt="Храм Пресвятої Трійці, 2026 р.">
+            <p>Храм Пресвятої Трійці, 2026 р.</p>
+        </div>
+    </div>
+
+    <!-- ========== СТУДИНЕЦЬ ========== -->
+    <div id="studynets" class="tab-content">
+        <h2>Богослужбова каплиця Трьох Святителів, с. Студинець</h2>
+
+        <p>Богослужбова каплиця Трьох Святителів розташована у приміщенні колишньої початкової школи. Сьогодні це невелика, але діюча святиня, яка є місцем регулярної молитви для місцевих мешканців. Каплицю відвідують понад 30 парафіян. Щонеділі у каплиці звершується Свята Літургія.</p>
+
+        <div class="photo-block">
+            <img src="photos/studynets-1.jpg" alt="Внутрішній вигляд каплиці">
+        </div>
+
+        <p>При каплиці служить паламар, діють церковні брати і сестри, вівтарна дружина та спільнота «Матері в молитві». Вівтарна дружина допомагає під час богослужінь, а спільнота «Матері в молитві» об'єднує жінок для спільної молитви за дітей, родини та мир. Поруч із каплицею облаштовано дитячий майданчик, що створює додатковий простір для дітей та родин, які приходять на богослужіння.</p>
+
+        <div class="info-box">
+            <p style="margin:0;">Наразі біля каплиці та на самій будівлі проводяться відновлювальні та ремонтні роботи. Зокрема, здійснюється перекриття даху, а також передбачено встановлення купола. Ці роботи мають на меті привести будівлю до належного стану та надати каплиці більш відповідного для богослужбової споруди вигляду.</p>
+        </div>
+
+        <div class="photo-block">
+            <img src="photos/studynets-2.jpg" alt="Богослужіння біля каплиці">
+        </div>
+    </div>
+
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Назад на головну</a>
+</div>
+
+<footer>
+    <p>&copy; 2026 Парафія Воскресіння Христового. Всі права захищені.</p>
+</footer>
+
+<script>
+    function showTab(id, btn) {
+        document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        btn.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
