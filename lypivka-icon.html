@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Липівська чудотворна ікона - Липівка</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --dark-gold: #B8860B;
+            --text-dark: #1a252f;
+        }
+
+        body { margin: 0; font-family: 'Montserrat', sans-serif; line-height: 1.8; color: var(--text-dark); background-color: #f4f7f6; }
+
+        .navbar { display: flex; justify-content: space-between; align-items: center; background: white; padding: 15px 50px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-weight: 700; color: var(--dark-gold); text-decoration: none; display: flex; align-items: center; gap: 12px; }
+        .menu { display: flex; align-items: center; }
+        .menu a { margin: 0 15px; text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 14px; }
+
+        .hamburger { display: none; background: none; border: none; font-size: 24px; color: var(--dark-gold); cursor: pointer; padding: 5px 10px; }
+
+        @media (max-width: 700px) {
+            .navbar { padding: 15px 20px; flex-wrap: wrap; }
+            .hamburger { display: block; }
+            .menu { display: none; width: 100%; flex-direction: column; align-items: center; }
+            .menu.open { display: flex; }
+            .menu a { margin: 10px 0; }
+            .info-card { padding: 25px; }
+            .container { margin-top: -30px; }
+            .page-header { padding: 80px 15px; }
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('church-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        .container { max-width: 1000px; margin: -50px auto 50px; position: relative; z-index: 10; }
+
+        .info-card {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .highlight { color: var(--dark-gold); font-weight: 700; }
+
+        .icon-photo { margin: 10px 0 35px; text-align: center; }
+        .icon-photo img { width: 100%; max-width: 320px; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+        .icon-photo p { font-size: 13px; color: #999; margin-top: 12px; font-style: italic; }
+
+        footer { background: #1a252f; color: white; padding: 40px 50px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html" class="logo">
+        <i class="fas fa-church"></i>
+        <div>Парафія Святого Воскресіння Христового, <span>с. Липівка</span></div>
+    </a>
+    <div class="menu" id="mainMenu">
+        <a href="index.html">Головна</a>
+        <a href="history.html">Історія парафії</a>
+        <a href="monastery.html">Урочище Монастир</a>
+        <a href="lypivka-icon.html" style="color: var(--primary-gold);">Липівська чудотворна ікона</a>
+        <a href="daughter-churches.html">Дочірні храми</a>
+        <a href="interesting.html">Цікаво знати</a>
+        <a href="contacts.html">Контакти</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('mainMenu').classList.toggle('open')" aria-label="Меню">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+
+<div class="page-header">
+    <h1>Липівська чудотворна ікона</h1>
+</div>
+
+<div class="container">
+    <div class="info-card">
+        <div class="icon-photo">
+            <img src="photos/lypivka-icon.jpg" alt="Липівська чудотворна ікона «Богородиця-Одигітрія»">
+            <p>Чудотворна ікона «Богородиця-Одигітрія»</p>
+        </div>
+
+        <p>З історією Свято-Троїцького монастиря та церкви в Липівці тісно пов'язана чудотворна ікона <span class="highlight">«Богородиця-Одигітрія»</span> — одна з найважливіших духовних та історичних святинь краю. За переказами, після закриття монастиря і перенесення монастирської церкви до села ікону також перенесли до храму. У храмі Воскресіння Христового ікона зберігалася над престолом.</p>
+
+        <p>У 2003 році її вперше зняли та передали на реставрацію художнику-реставратору Валерію Твердохлібу. Дослідження виявило чотири живописні нашарування. Найдавніше з них дало підстави датувати написання ікони XVII століттям, а оновлення, здійснене у XVIII столітті, засвідчило використання характерних для того часу технік і декоративних елементів. У XIX столітті ікону було вмонтовано у щит із зображенням монастирського краєвиду, на якому відтворено старий дуб, джерело та дорогу.</p>
+
+        <p>У 1887 році ікона була увінчана двома срібними, позолоченими коронами — окремо на головах Богородиці та Дитятка Ісуса. До того часу корони були лише намальовані. На коронах закріплено дев'ять коштовних каменів, а напис на короні Богородиці пов'язують із пожертвою Анелі Майковської.</p>
+
+        <p>Від 2003 року ікона стала центральною святинею щорічної молитовної процесії, яка відбувається щороку 6 липня, напередодні свята Різдва Івана Хрестителя. Парафіяни Липівки та навколишніх сіл вирушають до давнього монастирського місця біля старого дуба та джерела, з яким пов'язано перекази про історію ікони. Вода з цього джерела в народних переказах вважається цілющою, зокрема при очних недугах.</p>
+
+        <p>Ікона «Богородиця-Одигітрія» є не лише пам'яткою сакрального мистецтва XVII століття, а й символом духовної спадщини Липівки, що зберігає пам'ять про колишній монастир і підтримує живу молитовну традицію місцевої громади.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Парафія Воскресіння Христового. Всі права захищені.</p>
+</footer>
+
+</body>
+</html>
